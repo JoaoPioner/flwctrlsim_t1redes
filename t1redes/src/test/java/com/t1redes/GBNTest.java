@@ -33,7 +33,7 @@ class GBNTest {
         String seqbits = "2";
         String num_frames = "6";
         String lost_pkts = "3";
-        gbn = new GBN(algo, seqbits, num_frames, lost_pkts);
+        gbn = new GBN(seqbits, num_frames, lost_pkts);
         List<String> result = gbn.gbn();
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
@@ -57,7 +57,7 @@ class GBNTest {
         String seqbits = "2";
         String num_frames = "6";
         String lost_pkts = "0";
-        gbn = new GBN(algo, seqbits, num_frames, lost_pkts);
+        gbn = new GBN(seqbits, num_frames, lost_pkts);
         List<String> result = gbn.gbn();
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
@@ -85,7 +85,7 @@ class GBNTest {
         String seqbits = "2";
         String num_frames = "6";
         String lost_pkts = "1";
-        gbn = new GBN(algo, seqbits, num_frames, lost_pkts);
+        gbn = new GBN(seqbits, num_frames, lost_pkts);
         List<String> result = gbn.gbn();
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
@@ -113,7 +113,7 @@ class GBNTest {
         String seqbits = "2";
         String num_frames = "6";
         String lost_pkts = "1,7";
-        gbn = new GBN(algo, seqbits, num_frames, lost_pkts);
+        gbn = new GBN(seqbits, num_frames, lost_pkts);
         List<String> result = gbn.gbn();
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
@@ -162,7 +162,7 @@ class GBNTest {
         String seqbits = "3";
         String num_frames = "10";
         String lost_pkts = "2,3,8,10";
-        gbn = new GBN(algo, seqbits, num_frames, lost_pkts);
+        gbn = new GBN(seqbits, num_frames, lost_pkts);
         List<String> result = gbn.gbn();
         result.forEach(System.out::println);
         System.out.println();

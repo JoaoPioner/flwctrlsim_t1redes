@@ -1,7 +1,5 @@
 package com.t1redes;
 
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -18,12 +16,10 @@ public class Main {
             }break;
             case "gbn": {
                 System.out.println("executando GBN");
-                GBN gbn = new GBN(algo, seqbits, num_frames, lost_pkts);
+                GBN gbn = new GBN(seqbits, num_frames, lost_pkts);
                 gbn.gbn().forEach(System.out::println);
             }break;
-            case "sr": {
-
-            }break;
+            default: break;
         }
 
 

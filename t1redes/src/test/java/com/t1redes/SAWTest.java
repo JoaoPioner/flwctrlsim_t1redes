@@ -1,4 +1,4 @@
-/*package com.t1redes;
+package com.t1redes;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -49,7 +49,7 @@ class SAWTest {
         String seqbits = "1";
         String num_frames = "10";
         String lost_pkts = "3,10,15";
-        List<String> result = saw.saw(algo, seqbits, num_frames, lost_pkts);
+        List<String> result = saw.saw(seqbits, num_frames, lost_pkts);
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
     }
@@ -68,7 +68,7 @@ class SAWTest {
         String seqbits = "1";
         String num_frames = "4";
         String lost_pkts = "0";
-        List<String> result = saw.saw(algo, seqbits, num_frames, lost_pkts);
+        List<String> result = saw.saw(seqbits, num_frames, lost_pkts);
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
     }
@@ -89,7 +89,7 @@ class SAWTest {
         String seqbits = "1";
         String num_frames = "4";
         String lost_pkts = "1";
-        List<String> result = saw.saw(algo, seqbits, num_frames, lost_pkts);
+        List<String> result = saw.saw(seqbits, num_frames, lost_pkts);
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
     }
@@ -113,7 +113,7 @@ class SAWTest {
         String seqbits = "1";
         String num_frames = "4";
         String lost_pkts = "1,3";
-        List<String> result = saw.saw(algo, seqbits, num_frames, lost_pkts);
+        List<String> result = saw.saw(seqbits, num_frames, lost_pkts);
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
     }
@@ -136,8 +136,8 @@ class SAWTest {
         String seqbits = "1";
         String num_frames = "4";
         String lost_pkts = "3,6";
-        List<String> result = saw.saw(algo, seqbits, num_frames, lost_pkts);
+        List<String> result = saw.saw(seqbits, num_frames, lost_pkts);
         List<String> expectedList = Arrays.asList(expected.split("\n"));
         assertEquals(expectedList, result);
     }
-}*/
+}
